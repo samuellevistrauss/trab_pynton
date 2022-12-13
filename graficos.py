@@ -1,11 +1,18 @@
-import pandas as pd
+import matplotlib.pyplot as plt
 import numpy as np
-import matplotlib as plt
-file_loc = "dados.xlsx"
+import pandas as pd
 
-df = pd.read_excel(file_loc, index_col=None, na_values=['NA'], usecols="C")
+# DataFrame do Banco de dados
+Dados = pd.read_excel('dados.xlsx')
 
+# DataFrame da qntd de pessoas/cidade
+DPC = Dados.groupby('Cidade ').size()
 
-df1 = pd.read_excel(file_loc, index_col=None, na_values=['NA'], usecols="G" )
-#df1 = df1.iloc[1: , :]
-print(df1)
+# DataFrame da qntd de pessoas/graduação
+DPG = DVR.groupby('Graduação').size()
+
+# DataFrame da qntd de faixa pretas
+DFPVR = DVR[DVR['Graduação']=='Preta']
+
+# mostra o gráfico da quantidade de atletas nos bairros de volta redonda
+DVRbairros.groupby('Bairro').size().plot(kind='bar', figsize=(16,6), colormap='Blues_r')
