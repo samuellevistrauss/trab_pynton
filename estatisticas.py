@@ -5,6 +5,12 @@ import pandas as pd
 # DataFrame do Banco de dados
 Dados = pd.read_excel('dados.xlsx')
 
+# DataFrame do Banco de dados tratado
+Dados_alterado = 
+
+# DataFrame tratado da qntd de pessoas/bairro
+DVRbairros = Dados.groupby('Bairros').size()
+
 # DataFrame da qntd de pessoas/cidade
 DPC = Dados.groupby('Cidade ').size()
 
