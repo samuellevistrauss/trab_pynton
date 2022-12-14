@@ -6,10 +6,10 @@ import pandas as pd
 Dados = pd.read_excel('dados.xlsx')
 
 # DataFrame da qntd de pessoas/graduação
-DPG = DVR.groupby('Graduação').size()
+DPG = pd.read_excel('DPG.xlsx')
 
 # DataFrame da qntd de faixa pretas
-DFPVR = DVR[DVR['Graduação']=='Preta']
+DFPVR = pd.read_excel('DFPVR.xlsx')
 
 # mostra o box-plot dos faixa pretas de volta redonda
 DFPVR[['Idade', 'Bairro']].plot.box()
